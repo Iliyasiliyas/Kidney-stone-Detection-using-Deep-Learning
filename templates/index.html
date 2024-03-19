@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Stone Detection</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f4f4f4;
+           color: #333;
+           line-height: 1.6;
+       }
+       
+           .container {
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+           text-align: center; /* Center align the images */
+       }
+       h1, h2 {
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       p {
+           margin-bottom: 20px;
+       }
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #ffffffd5;
+       }
+       .navbar {
+           overflow: hidden;
+           background-color: #333;
+       }
+       .navbar a {
+           float: left;
+           display: block;
+           color: #f2f2f2;
+           text-align: center;
+           padding: 14px 16px;
+           text-decoration: none;
+       }
+       .navbar a:hover {
+           background-color: #ddd;
+           color: black;
+       }
+       .container {
+           max-width: 600px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       .container {
+    max-width: 80%; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+       }
+       h1 {
+           text-align: center;
+           color: #fffcfc;
+       }
+       form {
+           background-color: #fff;
+           padding: 30px; /* Increase padding */
+           border-radius: 15px; /* Round the corners */
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+       input[type="file"] {
+           margin-bottom: 20px;
+           padding: 15px; /* Increase padding */
+           width: 100%;
+           border: 1px solid #ccc;
+           border-radius: 10px; /* Round the corners */
+           box-sizing: border-box;
+       }
+       input[type="submit"] {
+           background-color: #4CAF50;
+           color: white;
+           padding: 15px 20px; /* Increase padding */
+           border: none;
+           border-radius: 10px; /* Round the corners */
+           cursor: pointer;
+           width: 100%;
+       }
+       input[type="submit"]:hover {
+           background-color: #45a049;
+       }
+
+       /* CSS for making images responsive */
+       img {
+           max-width: 100%;
+           height: auto;
+       }
+       .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #6c5656;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust the bottom margin to create space below the navbar */
+
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 0 #555;
+    transform: skew(-15deg);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablets and smaller screens */
+    .container {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for mobile devices */
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#uses">Advantages</a>
+        <a href="#stones">Stones</a>
+
+    </div>
+    
+    <div class="container">
+        <h1 style="font-size: 30px;     margin-top: 60px; /* Adjust the top margin to create space between the title and the navbar */
+        color: #2d1414;">Kidney Stone Detection</h1>
+        
+        <!-- Add images here -->
+        <img src="/static/images/kidney-stone-tests-imaging-blood-urine-at-home.webp" alt="Image 1">
+        
+        <form id="predictionForm" action="http://127.0.0.1:5000/predict" method="post" enctype="multipart/form-data" onsubmit="return validateForm()" style="max-width: 50;">
+            <input type="file" name="image" accept="image/jpeg" id="imageInput">
+            <input type="submit" value="Predict">
+        </form>
+        <script>
+            function validateForm() {
+                var fileInput = document.getElementById('imageInput');
+                if (fileInput.files.length === 0) {
+                    alert('Please select an image file.');
+                    return false; // Prevent form submission
+                }
+                return true; // Allow form submission
+            }
+        </script>
+        <img src="/static/images/ki-stone-killer-kidney-stone-killer-1000x1000.webp" alt="Image 2">
+        
+        <!-- Remaining content... -->
+        <div class="54" style="           background-color: #ffffffdc; " >
+            <h1 id="stones">Types of Kidney Stones</h1>
+            <p>There are several types of kidney stones, each formed from different substances found in the urine. The most common types of kidney stones include:</p>
+            
+            <h2>1. Calcium Stones</h2>
+        <p>These are the most common type of kidney stones and are usually composed of calcium oxalate. Oxalate is a naturally occurring substance found in foods like fruits, vegetables, nuts, and chocolate. High levels of oxalate in the urine can lead to the formation of calcium oxalate stones.</p>
+        
+        <h2>2. Struvite Stones</h2>
+        <p>Also known as infection stones, struvite stones are often caused by urinary tract infections (UTIs). These stones can grow quickly and become quite large, often leading to blockages in the urinary tract.</p>
+        
+        <h2>3. Uric Acid Stones</h2>
+        <p>Uric acid stones form when there is an excess of uric acid in the urine. This can occur due to a diet high in purines, which are found in certain foods like red meat, organ meats, and seafood. Conditions like gout and certain genetic factors can also increase the risk of uric acid stone formation.</p>
+        
+        <h2>4. Cystine Stones</h2>
+        <p>Cystine stones are rare and are caused by a hereditary disorder called cystinuria. People with cystinuria have high levels of the amino acid cystine in their urine, which can form crystals and lead to the formation of stones.</p>
+        
+        <h2>5. Other Stones</h2>
+        <p>Less common types of kidney stones include those made of other substances such as ammonium acid urate and xanthine.</p>
+        
+        <p>It's essential to identify the type of kidney stone a person has because treatment and prevention strategies may vary depending on the stone's composition. A healthcare provider can perform tests to determine the specific type of kidney stone and develop an appropriate treatment plan.</p>
+    </div>
+    <div style=" background-color: #ffffffdc; ">
+    <h2 id="uses">advantages</h2>
+ <p><b>Accessible Anytime, AnywhereUsers </b>can access the kidney stone detection tool from any device with internet access, whether it's a computer, tablet, or smartphone. This means they can conveniently use the tool from the comfort of their home or while on the go.</p>
+
+ <h2>Fast and Convenient Diagnosis</h2>
+ <p>Instead of having to schedule an appointment with a healthcare provider and wait for an available time slot, users can simply upload their medical images to the web application and receive detection results promptly. This saves time and effort for users, providing them with a faster diagnosis.</p>
+
+ <h2>Privacy and Confidentiality</h2>
+ <p>The web application ensures the privacy and confidentiality of users' medical information. Users can securely upload their medical images without concerns about their data being compromised, as the application adheres to strict privacy and security protocols.</p>
+
+ <h2>Empowerment and Informed Decision-Making</h2>
+ <p>By providing users with access to their detection results in a user-friendly format, the web application empowers them to make informed decisions about their healthcare. Users can better understand their condition and discuss treatment options with their healthcare providers based on the results.</p>
+
+ <h2>Cost-Effective Solution</h2>
+ <p>Using the web application for kidney stone detection may be more cost-effective for users compared to traditional diagnostic methods, which may involve expensive medical consultations and imaging procedures. The web application offers a more affordable alternative while still providing accurate detection results.</p>
+
+ <h2>Ease of Use</h2>
+ <p>The user interface of the web application is designed to be intuitive and easy to navigate, even for individuals with limited technical knowledge. Clear instructions and visual cues guide users through the process of uploading their medical images and viewing the detection results.</p>
+
+ <h2>Real-Time Feedback and Support</h2>
+ <p>Users can receive real-time feedback and support through the web application, whether it's assistance with uploading images, understanding the results, or accessing additional resources. This ensures that users have the support they need throughout the detection process.</p>
+</div>
+       
+    </div>
+</body>
+</html>
